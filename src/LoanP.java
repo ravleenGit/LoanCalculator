@@ -1,3 +1,4 @@
+//LoanP class which acts as Data Structure for Loan object
 public class LoanP
 {
 
@@ -8,7 +9,7 @@ public class LoanP
     private int years;
     private String loantype;
 
-//constructor to fill up data inside the fields
+    //constructor to fill up data inside the fields
     public LoanP(String clientno, String clientname, double loanamount, int years, String loantype)
     {
         this.clientno = clientno;
@@ -17,7 +18,8 @@ public class LoanP
         this.years = years;
         this.loantype = loantype;
     }
-//getter setter methods for fields
+
+    //getter setter methods for fields
     public void setClientno(String clientno)
     {
         this.clientno = clientno;

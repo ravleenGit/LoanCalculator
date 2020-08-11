@@ -22,6 +22,23 @@ public class LoanProjection {
     private JTextField monthlyPaymentTF;
     private JPanel rootPanel;
 
+    public void setTextField1(String textField1) {
+        this.textField1.setText(textField1);
+    }
+    public void setTextField2(String textField2) {
+        this.textField2.setText(textField2);
+    }
+    public void setTextField3(String textField3) {
+        this.textField3.setText(textField3);
+    }
+    public void setTextField4(String textField4) {
+        this.textField4.setText(textField4);
+    }
+
+    public void setComboBox1(JComboBox comboBox1) {
+        this.comboBox1 = comboBox1;
+    }
+
     private ArrayList<LoanP> loanPArrayList;
     int selectedItemIndex;
 
@@ -29,14 +46,21 @@ public class LoanProjection {
         return rootPanel;
     }
 
+    //Constructor of Form Class
     public LoanProjection() {
+
+        //Get all loans at starting
         getAllLoans();
+
+        //Add Button listener
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 addLoan();
             }
         });
+
+        //Item in table1 click listener
         table1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -64,12 +88,16 @@ public class LoanProjection {
 
             }
         });
+
+        //Edit button listener
         editButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 editLoan();
             }
         });
+
+        //Delete button listener
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,6 +106,8 @@ public class LoanProjection {
         });
     }
 
+
+    //Method to empty all the input fields
     public void emptyAllInputs(){
         textField1.setText("");
         textField2.setText("");
@@ -86,6 +116,7 @@ public class LoanProjection {
         monthlyPaymentTF.setText("");
     }
 
+    //Method to check the input field values
     public boolean validateInput(){
         boolean returnValue = true;
         if(textField1.getText() == null || textField1.getText().isEmpty()){
@@ -103,7 +134,7 @@ public class LoanProjection {
         return returnValue;
     }
 
-
+    //Method to get all loan records from database
     public void getAllLoans(){
         try
         {
@@ -111,11 +142,13 @@ public class LoanProjection {
             int c;
             Class.forName("com.mysql.jdbc.Driver");
 
+            //Connection object to our database
             Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/loan", "root", "");
 
-
+            //sql query to get all records
             PreparedStatement querySelect = con1.prepareStatement("Select * from loantable");
 
+            //result of get query
             ResultSet rs = querySelect.executeQuery();
 
 
@@ -123,6 +156,7 @@ public class LoanProjection {
             c = Res.getColumnCount();
 
             if(c > 0){
+                //Creating DefaultTableModel
                 DefaultTableModel df = new DefaultTableModel(
                         null,
                         new String[]{"Number", "Name", "Amount", "Years", "Type of Loan"}
@@ -139,6 +173,7 @@ public class LoanProjection {
 
                     loanPArrayList.add(loanObj);
 
+                    //Creating vector which acts as a row
                     Vector v2 = new Vector();
 
                     v2.add(loanObj.getClientno());
@@ -148,10 +183,12 @@ public class LoanProjection {
                     v2.add(loanObj.getLoantype());
 
 
+                    //Adding row to DataModel
                     df.addRow(v2);
 
                 }
 
+                //Setting DataModel to UI
                 table1.setModel(df);
             }
 
@@ -164,6 +201,7 @@ public class LoanProjection {
     }
 
 
+    //Method to Add loan
     public void addLoan(){
         PreparedStatement query;
 
