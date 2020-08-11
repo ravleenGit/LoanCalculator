@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.49-bin">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49-bin.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/appframework.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/beansbinding.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/imgscalr.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/intellij_forms_rt.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/JFormDesigner-Idea.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/jgoodies-common.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/jgoodies-forms.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/miglayout-core.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/miglayout-ideutil.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/miglayout-swing.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/swing-layout.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/JFormDesigner-7.0.2.4-intellij-idea/JFormDesigner/lib/TableLayout.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/mysql-connector-java-5.1.49/mysql-connector-java-5.1.49/src" />
+    </SOURCES>
+  </library>
+</component>
